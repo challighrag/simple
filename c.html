@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Carine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    #question-container {
+      margin-bottom: 20px;
+    }
+    #yesButton, #noButton {
+      width: 100px; /* Adjust the width as needed */
+      height: 40px; /* Adjust the height as needed */
+      font-size: 16px; /* Adjust the font size as needed */
+    }
+  </style>
+</head>
+<body>
+    <div id="question-container">
+        <h1>Can We Talk Video Call</h1>
+        <button id="yesButton" onclick="showAlert()">Yessssss</button>
+        <button id="noButton" onclick="changeButtonPlace()">Noooooo</button>
+    </div>
+    <img src="https://media.tenor.com/_b5Z8_r8d34AAAAC/don%E2%80%99t-make-me-beg.gif" alt=""width="300" height="300">
+<script>
+  function showAlert() {
+    alert("Thanks, I Love Youuuuuuu!");
+  }
+
+  function changeButtonPlace() {
+    var noButton = document.getElementById("noButton");
+    var parentContainer = document.body;
+
+    // Calculate maximum X and Y values
+    var maxX = window.innerWidth - noButton.clientWidth;
+    var maxY = window.innerHeight - noButton.clientHeight;
+
+    // Change button position randomly within the visible area
+    var randomX = Math.floor(Math.random() * maxX);
+    var randomY = Math.floor(Math.random() * maxY);
+
+    noButton.style.position = "absolute";
+    noButton.style.left = randomX + "px";
+    noButton.style.top = randomY + "px";
+}
+</script>
+</body>
+</html>
